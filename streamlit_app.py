@@ -9,7 +9,7 @@ st.set_page_config(
 )
 st.title("🖱️ Interactive table app")
 st.write(
-    """This app shows how you can use the [streamlit-aggrid](STREAMLIT_AGGRID_URL) 
+    f"""This app shows how you can use the [streamlit-aggrid]({STREAMLIT_AGGRID_URL}) 
     Streamlit component in an interactive way so as to display additional content 
     based on user click."""
 )
@@ -38,7 +38,7 @@ def aggrid_interactive_table(df: pd.DataFrame):
         df,
         enable_enterprise_modules=True,
         gridOptions=options.build(),
-        theme="light",
+        theme="streamlit",
         update_mode=GridUpdateMode.MODEL_CHANGED,
         allow_unsafe_jscode=True,
     )
